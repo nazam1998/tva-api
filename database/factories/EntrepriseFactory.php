@@ -13,15 +13,15 @@ class EntrepriseFactory extends Factory
      */
     public function definition()
     {
-        $faker = \Faker\Factory::create();
+
         return [
-            'tva' => $faker->numerify('########'),
-            'nom' => $faker->company,
-            'activite' => $faker->bs,
-            'adresse' => $faker->address,
-            'ville' => $faker->city,
-            'numero' => $faker->numerify('##########'),
-            'code_postal' => $faker->numerify('#####'),
+            'tva' => $this->faker->numerify('########'),
+            'nom' => $this->faker->company,
+            'activite' => $this->faker->bs,
+            'adresse' => $this->faker->address,
+            'ville' => $this->faker->city,
+            'numero' => $this->faker->numerify('##########'),
+            'code_postal' => $this->faker->numerify('#####'),
         ];
     }
 }
