@@ -20,6 +20,7 @@ class EntrepriseFactory extends Factory
             'activite' => $this->faker->bs,
             'adresse' => $this->faker->address,
             'ville' => $this->faker->city,
+            'pays' => $this->faker->country,
             'numero' => $this->faker->numerify('##########'),
             'code_postal' => $this->faker->numerify('#####'),
         ];

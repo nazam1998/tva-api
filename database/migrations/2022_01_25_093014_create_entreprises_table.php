@@ -20,6 +20,7 @@ class CreateEntreprisesTable extends Migration
             $table->string('activite');
             $table->string('adresse');
             $table->string('ville');
+            $table->string('pays');
             $table->bigInteger('numero');
             $table->integer('code_postal');
             $table->timestamps();
