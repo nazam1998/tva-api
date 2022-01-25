@@ -21,11 +21,18 @@ class EntrepriseController extends Controller
     public function show($tva)
     {
         $entreprise = Entreprise::where('tva', $tva)->first();
+        if ($entreprise != null) {
 
+            return response()->json([
+                'message' => 'Entreprise récupérée avec succès',
+                'data' => $entreprise,
+                'statut' => 200
+            ]);
+        }
         return response()->json([
-            'message' => 'Entreprise récupérée avec succès',
-            'data' => $entreprise,
-            'statut' => 200
+            'message' => 'Le numéro de TVA spécifié n\'existe pas.',
+            'data' => [],
+            'statut' => 404
         ]);
     }
 }
